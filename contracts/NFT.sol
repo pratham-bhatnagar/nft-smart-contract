@@ -17,9 +17,7 @@ contract NFT is ERC721URIStorage {
     constructor(address marketplaceAddress) ERC721("Partnerverse Tokens", "PNVT"){
        contractAddress = marketplaceAddress;
     }
-
-    /// @notice create a new token
-    /// @param tokenURI : token URI
+    
     function createToken(string memory tokenURI) public returns(uint) {
 
         _tokenIds.increment();
